@@ -14,7 +14,7 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: ${opt:region, 'us-east-1'}
   environment:
-    RSA256CERT: ${file(../rsa.cert)}
+    RSA256CERT: ${file(../rsa.pem)}
     TODO_TABLE: Todos-${self:provider.stage}
     S3_BUCKET: muttalebm-cfit-serverless-1906-${self:provider.stage}
   tracing:
