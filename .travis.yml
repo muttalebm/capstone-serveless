@@ -30,7 +30,7 @@ deploy_service_job: &DEPLOY_SERVICE_JOB
       # develop branch deploys to the 'dev' stage
       - <<: *DEPLOY_SERVICE_JOB
         name: "Deploy Test Experiences API"
-        if: type = push AND branch = develop
+        if: type = push AND branch = dev
         env:
           - SERVICE_PATH="backend"
           - STAGE_NAME=dev
@@ -38,7 +38,7 @@ deploy_service_job: &DEPLOY_SERVICE_JOB
       # uat branch deploys to the 'uat' stage
       - <<: *DEPLOY_SERVICE_JOB
         name: "Deploy Test Experiences API"
-        if: type = push AND branch = uat
+        if: type = push AND branch = test
         env:
           - SERVICE_PATH="backend"
           - STAGE_NAME=uat
