@@ -30,7 +30,7 @@ environments:
 - &DEVELOPMENT_ENV
   - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID_DEVELOPMENT}
   - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY_DEVELOPMENT}
-  jobs:
+jobs:
     include:
       # develop branch deploys to the 'dev' stage
       - <<: *DEPLOY_SERVICE_JOB
