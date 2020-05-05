@@ -8,6 +8,8 @@ deploy_service_job: &DEPLOY_SERVICE_JOB
       - node_modules
       - ${SERVICE_PATH}/node_modules
 
+  before_install:
+    - openssl aes-256-cbc -K $encrypted_3892a8cababd_key -iv $encrypted_3892a8cababd_iv -in rsa.cert.enc -out rsa.cert -d
   install:
     - npm install -g serverless
     - travis_retry npm install
