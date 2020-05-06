@@ -30,7 +30,7 @@ pipeline{
         stage("Deploy to S3"){
             steps{
                 dir("${env.WORKSPACE}//${CLIENT_DIR}"){
-                    withAws(region: 'us-east-1', credentials:'jenkins'){
+                    withAWS(region: 'us-east-1', credentials:'jenkins'){
                         s3Upload(bucket: "${S3_BUCKET_NAME}", workingDir:'build', includePathPattern:"**/*")
                     }
                 }
