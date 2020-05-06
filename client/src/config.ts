@@ -1,5 +1,5 @@
 const apiId = 'wb9w3tgvsb'
-export const apiEndpoint = `https://${apiId}.execute-api.us-east-1.amazonaws.com/dev`
+export const apiEndpoint = `https://${apiId}.execute-api.us-east-1.amazonaws.com/prod`
 
 export const authConfig = {
   domain: 'dev-muttalebm.auth0.com',            // Auth0 domain
