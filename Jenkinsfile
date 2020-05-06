@@ -4,7 +4,10 @@ pipeline{
         stage("Build"){
             steps{
                 dir("${env.WORKSPACE}/client"){
-                    sh "npm install"
+                    nodejs('node'){
+                        sh "npm install"
+                    }
+
                 }
 
             }
